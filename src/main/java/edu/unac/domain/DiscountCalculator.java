@@ -13,6 +13,11 @@ public class DiscountCalculator {
                     "Amount must be greater than zero"
             );
         }
+        if (amount >= 1000000){
+            throw new InvalidPurchaseException(
+                    "The amount exceeds the maximum"
+            );
+        }
     }
     private double calculateDiscount(
             double amount,

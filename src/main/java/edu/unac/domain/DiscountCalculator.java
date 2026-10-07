@@ -5,7 +5,7 @@ public class DiscountCalculator {
         double discount = calculateDiscount(amount, premiumCustomer);
         return amount - (amount * discount);
         //return amount * discount;
-        //Change
+        //Changes
     }
     private void validateAmount(double amount) {
         if (amount <= 0) {

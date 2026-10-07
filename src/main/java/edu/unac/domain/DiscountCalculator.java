@@ -3,8 +3,8 @@ public class DiscountCalculator {
     public double calculateFinalPrice(double amount, boolean premiumCustomer) {
         validateAmount(amount);
         double discount = calculateDiscount(amount, premiumCustomer);
-        //return amount - (amount * discount);
-        return amount * discount;
+        return amount - (amount * discount);
+        //return amount * discount;
     }
     private void validateAmount(double amount) {
         if (amount <= 0) {

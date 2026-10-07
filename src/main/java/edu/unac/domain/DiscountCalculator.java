@@ -5,11 +5,17 @@ public class DiscountCalculator {
         double discount = calculateDiscount(amount, premiumCustomer);
         return amount - (amount * discount);
         //return amount * discount;
+        //Changes
     }
     private void validateAmount(double amount) {
         if (amount <= 0) {
             throw new InvalidPurchaseException(
                     "Amount must be greater than zero"
+            );
+        }
+        if (amount >= 1000000){
+            throw new InvalidPurchaseException(
+                    "The amount exceeds the maximum"
             );
         }
     }
